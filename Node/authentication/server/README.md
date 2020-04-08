@@ -54,7 +54,7 @@ identificação válido e adicionar um usuário ao sistema.
 importados, para que os serviços desses módulos possam ser utilizados neste módulo. O controlador principal neste módulo 
 possui os seguintes pontos de extremidade:
 					
-* POST: / in: este endpoint chama o método authIn do AuthService .
-* POST: / out: este endpoint chama o método authOut do AuthService .
-* GET: / users: este endpoint chama o método getUsersMustBeWorkingNow do UsersService e combina 
+* <b>POST: / in:</b> este endpoint chama o método authIn do AuthService .
+* <b>POST: / out:</b> este endpoint chama o método authOut do AuthService .
+* <b>GET: / users:</b> este endpoint chama o método getUsersMustBeWorkingNow do UsersService e combina 
 	as informações com o registro de data e hora do servidor.
