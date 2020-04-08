@@ -1,6 +1,6 @@
 import { User as UserEntity, User } from '../entities/user.entity';
 import { Injectable, Inject } from '@nestjs/common';
-import { USER_REPOSITORY_TOKEN } from 'common/config/database.tokens.constants';
+import { USER_REPOSITORY_TOKEN } from 'src/common/config/database.tokens.constants';
 import { Repository } from 'typeorm';
 import * as moment from 'moment';
 import {
@@ -11,7 +11,7 @@ import {
   LAST_HOUR_MORNING,
   LAST_HOUR_NIGHT,
   HOUR_FORMAT,
-} from '../constants/users.constans';
+} from '../constants/user.constants';
 
 @Injectable()
 export class UserService {

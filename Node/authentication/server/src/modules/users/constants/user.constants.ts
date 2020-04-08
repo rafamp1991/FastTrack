@@ -1,4 +1,4 @@
-export const SCHEDULE_EXCLUDE = ['Mayor de 55 años', 'FCT'];
+export const SCHEDULE_EXCLUDE = ['Maior de 55 anos', 'FCT'];
 
 export const SCHEDULE_HOURS = [
   ['8:15', '9:15'],
@@ -15,7 +15,7 @@ export const SCHEDULE_HOURS = [
   ['21:15', '22:15'],
 ];
 
-export const FIRST_HOUR_MONING = '8:15';
+export const FIRST_HOUR_MORNING = '8:15';
 export const FIRST_HOUR_NIGHT = '16:00';
 export const LAST_HOUR_MORNING = '14:45';
 export const LAST_HOUR_NIGHT = '22:15';
