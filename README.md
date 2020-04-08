@@ -5,14 +5,12 @@
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
 </p>
 
-## Running the app
+## Como rodar a aplicação em Spring Boot
 ```bash
-# development
-$ npm run start
+$ mvn spring-boot:run
+```
 
-# watch mode
+## Como rodar a aplicação em Node
+```bash
 $ npm run start:dev
-
-# production mode
-$ npm run start:prod
 ```
