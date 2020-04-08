@@ -38,19 +38,27 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
-## Informações:
+## Tabelas:
 
-<b>DatabaseModule:</b> Este módulo é usado para compartilhar a conexão com o banco de dados entre diferentes módulos.
+<b>User:</b> as informações sobre os usuários no sistema e suas chaves.
 
-<b>AuthModule:</b> Este módulo é usado para registrar no banco de dados quando um usuário entra e sai. O serviço AuthService 
+<b>User-Schedule:</b> as informações sobre a programação e as salas em que o usuário deve estar.
+
+<b>Auth:</b> as informações sobre a entrada / saída (incluindo o registro de data e hora)
+
+## Módulos:
+
+<b>DatabaseModule:</b> este módulo é usado para compartilhar a conexão com o banco de dados entre diferentes módulos.
+
+<b>AuthModule:</b> este módulo é usado para registrar no banco de dados quando um usuário entra e sai. O serviço AuthService 
 será responsável por salvar no banco de dados quando um usuário fizer check-in e check-out. Este módulo não é acessível 
 desde externo. Portanto, não há um controlador para se comunicar usando a API.
 				
-<b>UserModule:</b> Este módulo é usado para gerenciar as informações do usuário. O serviço UserService fornece dois métodos 
+<b>UserModule:</b> este módulo é usado para gerenciar as informações do usuário. O serviço UserService fornece dois métodos 
 importantes: 1. getUsersWithoutKey; 2. addUser . Esse método é usado para saber que o usuário não possui um cartão de 
 identificação válido e adicionar um usuário ao sistema.
 
-<b>AppModule:</b> Este módulo é o módulo principal que será comunicado ao frontend. Neste módulo, os outros módulos serão 
+<b>AppModule:</b> este módulo é o módulo principal que será comunicado ao frontend. Neste módulo, os outros módulos serão 
 importados, para que os serviços desses módulos possam ser utilizados neste módulo. O controlador principal neste módulo 
 possui os seguintes pontos de extremidade:
 					
