@@ -54,7 +54,7 @@ AppModule: Este módulo é o módulo principal que será comunicado ao frontend.
 importados, para que os serviços desses módulos possam ser utilizados neste módulo. O controlador principal neste módulo 
 possui os seguintes pontos de extremidade:
 					
-	* POST: / in: este endpoint chama o método authIn do AuthService .
-	* POST: / out: este endpoint chama o método authOut do AuthService .
-	* GET: / users: este endpoint chama o método getUsersMustBeWorkingNow do UsersService e combina 
-		as informações com o registro de data e hora do servidor.
+* POST: / in: este endpoint chama o método authIn do AuthService .
+* POST: / out: este endpoint chama o método authOut do AuthService .
+* GET: / users: este endpoint chama o método getUsersMustBeWorkingNow do UsersService e combina 
+	as informações com o registro de data e hora do servidor.
