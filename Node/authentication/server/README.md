@@ -34,6 +34,21 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
+## Tecnologias
+
+<b>Nest Cli:</b> é uma ferramenta de interface da linha de comandos que ajuda a inicializar, desenvolver e manter seus aplicativos Nest. 
+
+```bash
+# Comando para criar um módulo
+$ nest generate module auth
+
+# Comando para criar um controller
+$ nest generate controller auth
+
+# Comando para criar um serviço
+$ nest generate service auth/auth
+```
+
 ## Tabelas:
 
 <b>User:</b> as informações sobre os usuários no sistema e suas chaves.
