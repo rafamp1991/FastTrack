@@ -1,10 +1,11 @@
 import {Body, Controller, Get, HttpStatus, Post, Req, Res, Session} from '@nestjs/common';
 import {UserService} from './user.service';
-import {ApiBearerAuth, ApiOperation, ApiResponse} from '@nestjs/swagger';
+import {ApiBearerAuth, ApiOperation, ApiResponse, ApiUseTags} from '@nestjs/swagger';
 import {CreateUserDto} from './models/CreateUserDto';
 import {Request, Response} from 'express';
 import { UserEntity } from './user.entity';
 
+@ApiUseTags('user')
 @Controller('user')
 export class UserController {
     constructor(private readonly usersService: UserService) {}
