@@ -1,8 +1,8 @@
 {
-  "name": "nestjs-session-tutorial",
+  "name": "authentication",
   "version": "1.0.0",
-  "description": "finished-source-code-for-nest-js-sessions-tutorial",
-  "author": "anton-sukhovatkin",
+  "description": "Autenticação com NestJs",
+  "author": "Rafael Martins de Padua",
   "license": "MIT",
   "scripts": {
     "format": "prettier --write \"**/*.ts\"",

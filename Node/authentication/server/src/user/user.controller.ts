@@ -26,4 +26,11 @@ export class UserController {
         await this.usersService.createUser(createUser);
         return res.status(HttpStatus.CREATED).send();
     }
+
+    @Post('login')
+    @ApiOperation({title: 'Authenticate'})
+    @ApiBearerAuth()
+    public async login(@Req() req: Request, @Res() res: Response, @Session() session) {
+        return res.status(HttpStatus.OK).send();
+    }
 }
