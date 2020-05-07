@@ -3,7 +3,7 @@ import db from '../database/connection';
 
 const Task = db.define('tasks', {
   id: {
-    type: Sequelize.BIGINT,
+    type: Sequelize.INTEGER,
     autoIncrement: true,
     primaryKey: true
   },
@@ -18,8 +18,8 @@ const Task = db.define('tasks', {
   },
 
   status: {
-    type: Sequelize.ENUM,
-    values: ['WAITING, RUNNING, COMPLETE']
+    type: Sequelize.ENUM('WAITING', 'RUNNING', 'COMPLETE'),
+    defaultValue: 'WAITING'
   },
 
   attachment: {
@@ -28,7 +28,7 @@ const Task = db.define('tasks', {
 
   created_at: {
     type: Sequelize.DATE
-  }
+  } 
 
 });
 
