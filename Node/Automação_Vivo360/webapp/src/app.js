@@ -12,10 +12,5 @@ app.use(morgan('dev'));
 app.use(express.json());
 app.use('/', routes);
 
-var CronJob = require('cron').CronJob;
-var job = new CronJob('*/10 * * * * *', function() {
-    console.log('You will see this message every 10 second');
-});
-job.start();
-
+require("./scheduler.js");
 export default app;

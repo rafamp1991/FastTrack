@@ -1,0 +1,6 @@
+{
+  "http.proxy": "http://proxy.redecorp.br:8080",
+  "http.proxyStrictSSL": false,
+  "tslint.autoFixOnSave": true,
+  "editor.formatOnSave": true
+}
