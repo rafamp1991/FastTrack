@@ -21,8 +21,8 @@ export class FetchClientLineRepository extends SoapEsbRepository {
       numeroCPFCNPJ: cpfOrCnpj,
     };
 
-    return this.callWS(operation, args, null, null)
-      .then((result: FetchClientLine) => {
+    return this.callWS(operation, args, {})
+      .then(result => {
         if (result) {
           this.logger.info(
             `Lines from client was retrieved with success for cpfOrCnpj: ${cpfOrCnpj}`,
@@ -42,7 +42,7 @@ export class FetchClientLineRepository extends SoapEsbRepository {
           Exception4PCodes.NOT_FOUND,
         );
       })
-      .catch((error) => {
+      .catch(error => {
         this.logger.error(
           `Error while trying to retrieve lines from client for cpfOrCnpj: ${cpfOrCnpj}`,
           'FetchClientLineRepository - getClientLines(cpfOrCnpj: string)',

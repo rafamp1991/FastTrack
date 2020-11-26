@@ -16,7 +16,7 @@ describe('FetchClientLineRepository test', () => {
   });
 
   it('Should expect an object.', async () => {
-    const mockCallWs = jest.spyOn(fetchClientLineRepository, 'getClientLines');
+    const mockCallWs = jest.spyOn(fetchClientLineRepository, 'callWS');
     mockCallWs.mockImplementation(
       () =>
         new Promise((resolve, reject) => {
@@ -29,16 +29,16 @@ describe('FetchClientLineRepository test', () => {
   });
 
   it('Should return error 404 when returning an empty object.', async () => {
-    const mockCallWs = jest.spyOn(fetchClientLineRepository, 'getClientLines');
+    const mockCallWs = jest.spyOn(fetchClientLineRepository, 'callWS');
     mockCallWs.mockImplementation(
       () =>
         new Promise((resolve, reject) => {
-          resolve({});
+          resolve({}[0]);
         }),
     );
 
     try {
-      await fetchClientLineRepository.getClientLines(mockCpf);
+      await fetchClientLineRepository.getClientLines('88');
       fail();
     } catch (error) {
       expect(error).toBeInstanceOf(Exception4P);

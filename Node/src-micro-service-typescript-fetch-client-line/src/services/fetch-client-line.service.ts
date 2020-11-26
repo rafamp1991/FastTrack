@@ -1,11 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { BaseService } from '@microservicos-api/vivo-nodejs-commons';
 import { FetchClientLineRepository } from '../repository/fetch-client-line.repository';
-import {
-  AbstractVivoExceptionFactory,
-  Exception4PCodes,
-  VIVO_EXCEPTIONS,
-} from '@microservicos-api/vivo-4p-exceptions-utils';
+import { ErrorUtils } from '../utils/error.utils';
 
 @Injectable()
 export class FetchClientLineService extends BaseService {
@@ -25,18 +21,14 @@ export class FetchClientLineService extends BaseService {
   }
 
   private findclientLines(clientLines) {
-    clientLines = clientLines.find(
-      (line) => line.linha[0].statusAssinatura.descricao === 'Ativo',
+    const result = clientLines.find(
+      line => line.linha[0].statusAssinatura.descricao === 'Ativo',
     );
-    if (clientLines) {
-      return this.filterclientLines(clientLines);
+
+    if (!result) {
+      ErrorUtils.throwSpecificError(404);
     }
-    if (!clientLines) {
-      throw AbstractVivoExceptionFactory.getInstance(
-        VIVO_EXCEPTIONS.QUARTA_PLATAFORMA,
-        Exception4PCodes.NOT_FOUND,
-      );
-    }
+    return this.filterclientLines(result);
   }
 
   private filterclientLines(clientLines) {
