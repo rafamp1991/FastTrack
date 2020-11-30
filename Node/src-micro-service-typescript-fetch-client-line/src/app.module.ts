@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
-import { FetchClientLineController } from './controllers/fetch-client-line.controller';
-import { FetchClientLineService } from './services/fetch-client-line.service';
-import { FetchClientLineRepository } from '../src/repository/fetch-client-line.repository';
+import { FetchClientLineController } from './controllers/fetchClientLine.controller';
+import { FetchClientLineService } from './services/fetchClientLine.service';
+import { FetchClientLineRepository } from './repository/fetchClientLine.repository';
 
 @Module({
   imports: [],

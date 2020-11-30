@@ -1,6 +1,6 @@
-import { FetchClientLineRepository } from '../../src/repository/fetch-client-line.repository';
+import { FetchClientLineRepository } from '../../src/repository/fetchClientLine.repository';
 import { TestingModule, Test } from '@nestjs/testing';
-import { FetchClientLineService } from '../../src/services/fetch-client-line.service';
+import { FetchClientLineService } from '../../src/services/fetchClientLine.service';
 import { objectMock } from '../mocks/fetchClientLine.mock';
 import { Exception4P } from '@microservicos-api/vivo-4p-exceptions-utils';
 
